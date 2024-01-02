@@ -1,13 +1,28 @@
 import React from 'react'
-import Newbody from './component/Newbody'
-import Videooo from './component/Videooo'
+import Loginn from './component/Loginn'
+import Topics from './component/Topics'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 const App = () => {
-  
-  return (
-    <div style={{display:'flex',flexDirection:'column'}}>
-      <Newbody/>
-      <div style={{margin:'780px 20px 10px 400px',justifyContent:'center',alignItems:'center'}}> <Videooo/></div>
+   return (
+   <div className="App">
+    <BrowserRouter>
+    <Routes>
+      <Route
+       path="/"
+       element={<Loginn/>}
+      />
+      <Route
+       path="/topics"
+       element={<Topics/>}
+      />
+    </Routes>
+    
+    
+    </BrowserRouter>
       
+      
+    
+        
     </div>
   )
 }
